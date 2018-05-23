@@ -4,3 +4,9 @@ Untuk menggunakan kemampuan komunikasi serial ini, di Arduino, di bagian kosong 
 \Penulisan objek  dan fungsi  pada library arduino adalah  dan namaobjek dan nama fungsi
 contoh :  Serial.read()  , artinya  kita memanggil fungsi read() dari  objek bernama Serial .
 Data yg dikirim  ke serial port  akan dikirim ke buffer pengirim (Tx buffer)  begitupun data yg diterima  adalah data yg diambil  dari  buffer penerima (RX buffer).
+\subsection(Fungsi-fungsi yg tersedia pada serial Arduino)
+if (Serial): Untuk memeriksa apakah Port sudah siap
+Serial.available (): Untuk memeriksa apakah data sudah ada di buffer penerima
+Serial.begin (): untuk mengatur kecepatan transmisi data
+serial.end (): Untuk menonaktifkan pin rx dan tx sebagai fungsi serial dan kembali sebagai pin I / O
+Serial.find (): cari data string dalam buffer
