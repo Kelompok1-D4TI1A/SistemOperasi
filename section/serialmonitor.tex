@@ -10,3 +10,10 @@ Serial.available (): Untuk memeriksa apakah data sudah ada di buffer penerima
 Serial.begin (): untuk mengatur kecepatan transmisi data
 serial.end (): Untuk menonaktifkan pin rx dan tx sebagai fungsi serial dan kembali sebagai pin I / O
 Serial.find (): cari data string dalam buffer
+
+\subsection
+Langkah-langkah untuk membuat program sketsa komunikasi serial
+1. tetapkan baud rate misal 9600 dengan fungsi serial.begin (9600) dalam fungsi void setup (). Kecepatan yang tersedia termasuk 300, 1200, 2400, 4800, 9600, 14400, 19200, 28800,38400, 57600, 115200 (lihat dokumentasi masing-masing jenis arduino).
+2. untuk menerima data cek apakah ada data di Rx Buffer dengan fungsi serial.avalable ()
+jika data tersedia nilai kembalian = true jika data adalah nilai kembalian kosong = salah.
+if (serial.available ()> 0)
