@@ -3,7 +3,7 @@ Monitor serial adalah jendela yang menunjukkan data yang dipertukarkan antara ar
 Untuk menggunakan kemampuan komunikasi serial ini, di Arduino, di bagian kosong dari pengaturan (), ini dimulai dengan instruksi Serial. Diikuti oleh nilai baudrate.
 \Penulisan objek  dan fungsi  pada library arduino adalah  dan namaobjek dan nama fungsi
 contoh :  Serial.read()  , artinya  kita memanggil fungsi read() dari  objek bernama Serial .
-Data yg dikirim  ke serial port  akan dikirim ke buffer pengirim (Tx buffer)  begitupun data yg diterima  adalah data yg diambil  dari  buffer penerima (RX buffer). Sebuah data yang dikirm akan diterima oleh arduino  dalam bentuk ASCII. Misalnya  program arduino  mengirim huruf  A maka yang akan dikirim sebenarnya adalah 1 byte code ASCII yaitu 65 .  Jika kita mengirim angka 1,2,3 maka sebetulnya yg dikirm adalah 3 byte data ASCII yaitu 49, 48, dan 50 . Selengkapnya anda bisa lihat tabel ASCII berikut :
+Data yg dikirim  ke serial port  akan dikirim ke buffer pengirim (Tx buffer)  begitupun data yg diterima  adalah data yg diambil  dari  buffer penerima (RX buffer). Sebuah data yang dikirm akan diterima oleh arduino  dalam bentuk ASCII. Misalnya  program arduino  mengirim huruf  A maka yang akan dikirim sebenarnya adalah 1 byte code ASCII yaitu 65 .  Jika kita mengirim angka 1,2,3 maka sebetulnya yg dikirm adalah 3 byte data ASCII yaitu 49, 48, dan 50 . Selengkapnya anda bisa lihat tabel ASCII berikut : 1
 \subsection(Fungsi-fungsi yg tersedia pada serial Arduino)
 if (Serial): Untuk memeriksa apakah Port sudah siap
 Serial.available (): Untuk memeriksa apakah data sudah ada di buffer penerima
