@@ -1,7 +1,7 @@
 \section{Serial Monitor}
 Monitor serial adalah jendela yang menunjukkan data yang dipertukarkan antara arduino dan komputer selama operasi, sehingga Anda dapat menggunakan monitor seri ini untuk menampilkan nilai hasil operasi atau pesan debug. Selain melihat data, Anda juga dapat mengirim data ke Arduino melalui seri monitor ini, dengan memasukkan data dalam kotak teks dan menekan tombol kirim untuk mengirim data. Yang penting untuk diperhatikan adalah menyamakan baudrate antara seri monitor dan papan Arduino. 
 Untuk menggunakan kemampuan komunikasi serial ini, di Arduino, di bagian kosong dari pengaturan (), ini dimulai dengan instruksi Serial. Diikuti oleh nilai baudrate.
-\Penulisan objek  dan fungsi  pada library arduino adalah  dan namaobjek dan nama fungsi
+\subsection Penulisan objek  dan fungsi  pada library arduino adalah  dan namaobjek dan nama fungsi
 contoh :  Serial.read()  , artinya  kita memanggil fungsi read() dari  objek bernama Serial .
 Data yg dikirim  ke serial port  akan dikirim ke buffer pengirim (Tx buffer)  begitupun data yg diterima  adalah data yg diambil  dari  buffer penerima (RX buffer). Sebuah data yang dikirm akan diterima oleh arduino  dalam bentuk ASCII. Misalnya  program arduino  mengirim huruf  A maka yang akan dikirim sebenarnya adalah 1 byte code ASCII yaitu 65 .  Jika kita mengirim angka 1,2,3 maka sebetulnya yg dikirm adalah 3 byte data ASCII yaitu 49, 48, dan 50 . Selengkapnya anda bisa lihat tabel ASCII berikut : 1
 \subsection(Fungsi-fungsi yg tersedia pada serial Arduino)
@@ -21,3 +21,11 @@ Langkah-langkah untuk membuat program sketsa komunikasi serial
 2. untuk menerima data cek apakah ada data di Rx Buffer dengan fungsi serial.avalable ()
 jika data tersedia nilai kembalian = true jika data adalah nilai kembalian kosong = salah.
 if (serial.available ()> 0)
+3. mengambil data dari penerima buffer: serial.read (), return value adalah 1 byte data pertama di RX Buffer.
+misalnya buffer RX byte pertama berisi char 2
+kemudian char data = serial.read (); // data = '2' -> karakter
+byte data = serial.read (); // data = 50 -> numerik
+4. Untuk mengirim data dapat digunakan
+serial.print (dataygdikirim): mengirim data ascii
+serial.println (dataygdikirim), plus masukkan kode (CR dan LF)
+serial.write (dataygdikirim): mengirim data byte
