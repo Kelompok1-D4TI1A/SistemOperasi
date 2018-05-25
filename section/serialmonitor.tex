@@ -15,7 +15,14 @@ Serial.find (): cari data string dalam buffer
 Serial.findUntil (): berfungsi untuk mencari buffer data sampai panjang data / terminator yang ditentukan ditemukan
 Serial.flush (): berfungsi untuk menunggu semua data terkirim
 Serial.parseFloat (): berfungsi untuk mengambil data float pertama dari data dalam buffer serial.
-serial.parseInt (): berfungsi untuk mengambil data bilangan bulat pertama dari data dalam buffer serial.
+serial.parseInt (): berfungsi untuk mengambil data bilangan bulat pertama dari data dalam buffer serial.Serial.peek (): mengambil data berikutnya di buffer penerima
+Serial.print (): mengirim data ASCII
+Serial.println (): senddata ASCII + CR, LF (masukkan kode)
+Serial.read (): membaca data yang diterima
+Serial.readBytes (): membaca data byte yang diterima
+Serial.setTimeout (): menetapkan batas waktu maksimum untuk transmisi data.
+Serial.write (): mengirim data byte (numerik)
+Serial.serialEvent (): fungsi ini akan dipanggil ketika data tiba / diterima. Kerjanya seperti interupsi serial.
 
 \subsection
 Langkah-langkah untuk membuat program sketsa komunikasi serial
