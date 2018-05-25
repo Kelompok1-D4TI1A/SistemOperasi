@@ -42,3 +42,8 @@ byte data = serial.read (); // data = 50 -> numerik
 serial.print (dataygdikirim): mengirim data ascii
 serial.println (dataygdikirim), plus masukkan kode (CR dan LF)
 serial.write (dataygdikirim): mengirim data byte
+Contoh serial.print ('A') akan mengirim huruf A
+serial.print (65) akan mengirimkan 2 byte yang berisi kode ascii '6' dan '5' (aktual dikirim 54 dan 53)
+serial.write (65) akan mengirim 1 byte 65 (aktual yang dikirim numerik 65)
+serial.write (data) adalah pengganti sintaks Serial.print sebelumnya (data, BYTE). Parameter data dalam serial.write adalah angka 1 byte (0-255)
+contoh program sketsa sederhana menerima data kemudian data dikirim kembali
