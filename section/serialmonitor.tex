@@ -46,4 +46,12 @@ Contoh serial.print ('A') akan mengirim huruf A
 serial.print (65) akan mengirimkan 2 byte yang berisi kode ascii '6' dan '5' (aktual dikirim 54 dan 53)
 serial.write (65) akan mengirim 1 byte 65 (aktual yang dikirim numerik 65)
 serial.write (data) adalah pengganti sintaks Serial.print sebelumnya (data, BYTE). Parameter data dalam serial.write adalah angka 1 byte (0-255)
-contoh program sketsa sederhana menerima data kemudian data dikirim kembali
+contoh program sketsa sederhana menerima data kemudian data dikirim kembali.
+Beberapa contoh yang akan kami buat meliputi:
+________________________________________
+- Mengirimkan string data / teks "apa kabar"
+-Mengirim nomor / angka data: 123
+-Menerima data nomor ASCII mis data yang datang misalnya "435"
+________________________________________
+* Langkah pertama
+karakter diakomodasi dalam array dan dikonversi ke string dengan menambahkan nol 0 ke ujung array (karena string adalah array tipe char yang berakhir dengan null). maka data array / string dikonversi menjadi int dengan fungsi atoi.
