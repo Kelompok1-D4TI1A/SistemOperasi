@@ -5,12 +5,15 @@ Untuk menggunakan kemampuan komunikasi serial ini, di Arduino, di bagian kosong 
 Menulis artikel dan fungsi di perpustakaan arduino adalah: namaobjek.namafungsi
 Sebagai contoh, Serial.read (), yang berarti kita memanggil fungsi read () dari objek yang bernama Serial.
 Data yang dikirim ke Cisco akan dikirim ke buffer Tx dan informasi yang diterima adalah informasi yang diterima dari penerima buffer (buffer RX).
+Jika Anda ingin membuat sebuah template, Anda dapat menggunakan utilitas dari bahas C ++ untuk membuat pustaka untuk semua kelas C ++. Untuk alasan ini, pedoman etika pelanggan yang digunakan untuk mengenali tujuan pemrograman objek. oleh karena itu disarankan sebaiknya anda mempelajari terlebih dahulu hal-hal yang dibutuhkan dalam memahami pemrogaman beroientasi objek.
+
 Buffer adalah area penyimpanan memori ketika dipindahkan antara dua perangkat atau antara perangkat dan aplikasi. Buffering adalah untuk tiga alasan
 \subsection Penulisan objek  dan fungsi  pada library arduino adalah  dan namaobjek dan nama fungsi
 contoh :  Serial.read()  , artinya  kita memanggil fungsi read() dari  objek bernama Serial .
 Data yg dikirim  ke serial port  akan dikirim ke buffer pengirim (Tx buffer)  begitupun data yg diterima  adalah data yg diambil  dari  buffer penerima (RX buffer). Sebuah data yang dikirm akan diterima oleh arduino  dalam bentuk ASCII. Misalnya  program arduino  mengirim huruf  A maka yang akan dikirim sebenarnya adalah 1 byte code ASCII yaitu 65 .  Jika kita mengirim angka 1,2,3 maka sebetulnya yg dikirm adalah 3 byte data ASCII yaitu 49, 48, dan 50 . Selengkapnya anda bisa lihat tabel ASCII berikut : 
 Karena data yang diterima arduino juga dalam bentuk ASCII (char) maka kita tidak langsung melakukan operasi matematis data ASCII pada program sketsa arduino. Data ASCII dari buffer serial harus diubah terlebih dahulu ke nomor bentuk / nomor int. misalkan kita menerima data '4' dan '3' maka jika kita langsung menjumlahkan '3' + '4' = 103
 \subsection(Fungsi-fungsi yg tersedia pada serial Arduino)
+Semua papan arduino memiliki setidaknya 1 port serial, juga dikenal sebagai UART atau USART. Komunikasi data serial menggunakan 2 pin yaitu pin RX untuk menerima data dan TX ppin untuk mengirimkan data. Di papan arduino pin RX terletak di pin0 dan pin TX terletak di pin1. Ketika papan Arduino dikonfigurasi untuk berkomunikasi secara serial, maka pin0 dan pin1 tidak dapat digunakan sebagai pin input / output digital.
 if (Serial): Untuk memeriksa apakah Port sudah siap
 Serial.available (): Untuk memeriksa apakah data sudah ada di buffer penerima
 Serial.begin (): untuk mengatur kecepatan transmisi data
