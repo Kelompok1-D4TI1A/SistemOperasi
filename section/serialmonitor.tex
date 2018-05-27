@@ -16,6 +16,9 @@ Untuk mengkonversi data ascii ke data numerik dengan cara yang cukup sederhana y
 -untuk mendapatkan angka 0 dari ascii '0' oleh '0'- 48 = 0 (atau bisa juga ditulis' 0 '-' 0 '= 0)
 -untuk mendapatkan nomor 1 dari ascii '1' oleh '1'- 48 = 1 (atau bisa juga ditulis' 1 '-' 0 '= 1)
 -Dll.
+Jadi kesimpulannya jika Anda ingin menambahkan data ascii '3' dan '4' yang kami terima dari RX Bufer maka kode pemrograman harus:
+Int of number = ('3' - '0') + ('4' - '0') atau
+int dari angka = ('3'- 48) + (' 4'-48) maka hasil yang diperoleh adalah bilangan bulat 7.
 \subsection(Fungsi-fungsi yg tersedia pada serial Arduino)
 Semua papan arduino memiliki setidaknya 1 port serial, juga dikenal sebagai UART atau USART. Komunikasi data serial menggunakan 2 pin yaitu pin RX untuk menerima data dan TX ppin untuk mengirimkan data. Di papan arduino pin RX terletak di pin0 dan pin TX terletak di pin1. Ketika papan Arduino dikonfigurasi untuk berkomunikasi secara serial, maka pin0 dan pin1 tidak dapat digunakan sebagai pin input / output digital.Di dalam sistem operasi Windows XP ada program HyperTerminal yang dapat digunakan sebagai alat komunikasi serial dengan perangkat keras. Di Windows yang lebih baru, seperti Win7, Win8 dan Vista, program hyperterminal tidak tersedia. Tapi  program Arduino telah menghadirkan sebuah monitor serial yang dapat dibuka dengan memilih perangkat monitor serial pada menu program arduino.
 if (Serial): Untuk memeriksa apakah Port sudah siap
