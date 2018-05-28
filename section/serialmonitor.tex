@@ -71,3 +71,6 @@ ________________________________________
 karakter diakomodasi dalam array dan dikonversi ke string dengan menambahkan nol 0 ke ujung array (karena string adalah array tipe char yang berakhir dengan null). maka data array / string dikonversi menjadi int dengan fungsi atoi.
 Menambahkan port serial pada pin I/O
 Jika arduino yg kita miliki hanya punya 1 port serial kita bisa merubah pin I/O yg manapun menjadi Port serial tambahan .dengan bantuan class SoftwareSerial  .  Tambahkan file header SoftwareSerial.h  pada sketch anda dan buat 1 buah  objek SoftwareSerial untuk penambahan 1 port, pada contoh dibawah ini kita buat 1 objek sofwareSerial dgn nama serialkedua
+kita dapat mengubah pin I / O ke Serial Port tambahan dengan kelas SoftwareSerial. Tambahkan file header SoftwareSerial.h ke sketsa Anda dan buat 1 objek SoftwareSerial untuk mengakses 1 port, dalam contoh ini kita membuat 1 objek perangkat lunak serial dengan nama serial.
+Menerima Data Serial dengan Interupsi
+pada penerimaan serial interrupt, jika ada data yang datang maka fungsi otomatis serialEvent () akan dieksekusi
